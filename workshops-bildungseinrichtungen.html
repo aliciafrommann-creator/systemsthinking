@@ -51,16 +51,6 @@
       z-index: 1;
     }
 
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 1;
-      opacity: .12;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
-    }
-
     a { color: inherit; text-decoration: none; }
     button { font: inherit; }
 
@@ -72,7 +62,7 @@
     }
 
     .section {
-      padding: 110px 0;
+      padding: 72px 0;
       position: relative;
       z-index: 2;
     }
@@ -85,7 +75,7 @@
       letter-spacing: .18em;
       text-transform: uppercase;
       color: var(--accent-light);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .eyebrow::before {
@@ -102,23 +92,21 @@
       font-weight: 700;
     }
 
-    h1 { font-size: clamp(3rem, 7vw, 5.8rem); }
-    h2 { font-size: clamp(2rem, 4.4vw, 4rem); }
-    h3 { font-size: clamp(1.2rem, 2vw, 1.65rem); }
+    h1 { font-size: clamp(3rem, 7vw, 5.4rem); }
+    h2 { font-size: clamp(2rem, 4.2vw, 3.3rem); }
+    h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 
     .lead {
-      font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+      font-size: clamp(1.03rem, 1.7vw, 1.2rem);
       color: var(--muted);
-      max-width: 880px;
+      max-width: 860px;
     }
 
     .muted { color: var(--muted); }
 
     .topbar {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      inset: 0 0 auto 0;
       z-index: 50;
       transition: background .35s ease, border-color .35s ease, backdrop-filter .35s ease;
       border-bottom: 1px solid transparent;
@@ -143,7 +131,6 @@
       font-weight: 700;
       letter-spacing: .08em;
       text-transform: uppercase;
-      color: var(--text);
       white-space: nowrap;
     }
 
@@ -164,9 +151,9 @@
       color: var(--muted);
       font-size: 14px;
       transition: color .25s ease, background .25s ease;
-      cursor: pointer;
       background: transparent;
       border: 0;
+      cursor: pointer;
     }
 
     .nav-link:hover, .drop-toggle:hover {
@@ -254,7 +241,7 @@
     .mobile-panel summary::-webkit-details-marker { display: none; }
 
     .hero {
-      min-height: 72vh;
+      min-height: 70vh;
       display: grid;
       align-items: center;
       padding-top: calc(var(--nav-h) + 40px);
@@ -266,9 +253,9 @@
       content: "";
       position: absolute;
       right: -120px;
-      top: 140px;
-      width: 480px;
-      height: 480px;
+      top: 120px;
+      width: 440px;
+      height: 440px;
       border-radius: 50%;
       background: radial-gradient(circle, rgba(74,143,96,.18), rgba(74,143,96,.05) 45%, transparent 70%);
       filter: blur(24px);
@@ -278,17 +265,17 @@
     .hero-inner {
       position: relative;
       z-index: 2;
-      max-width: 980px;
+      max-width: 920px;
     }
 
     .hero-subline {
-      font-size: clamp(1.2rem, 2vw, 1.6rem);
-      margin: 18px 0 22px;
+      font-size: clamp(1.12rem, 2vw, 1.45rem);
+      margin: 16px 0 18px;
       color: #dfe3ea;
     }
 
     .hero-text {
-      font-size: clamp(1rem, 1.6vw, 1.16rem);
+      font-size: clamp(1rem, 1.5vw, 1.1rem);
       color: var(--muted);
       max-width: 820px;
     }
@@ -296,23 +283,21 @@
     .btn-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 34px;
+      gap: 12px;
+      margin-top: 26px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      min-height: 52px;
-      padding: 0 22px;
+      min-height: 50px;
+      padding: 0 20px;
       border: 1px solid rgba(255,255,255,.12);
       border-radius: 999px;
       color: var(--text);
       background: transparent;
-      transition: transform .25s ease, border-color .25s ease, background .25s ease, color .25s ease, box-shadow .25s ease;
-      box-shadow: inset 0 0 0 0 var(--accent);
+      transition: .25s ease;
     }
 
     .btn:hover {
@@ -323,17 +308,21 @@
     }
 
     .btn.primary {
-      background: rgba(45,90,61,.14);
+      background: rgba(45,90,61,.18);
       border-color: rgba(74,143,96,.5);
     }
 
-    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
 
     .card {
       background: linear-gradient(180deg, rgba(20,21,29,.95), rgba(17,17,24,.9));
       border: 1px solid rgba(255,255,255,.08);
       border-radius: var(--radius);
-      padding: 28px;
+      padding: 26px;
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
@@ -347,17 +336,11 @@
       pointer-events: none;
     }
 
-    .card:hover {
-      border-color: rgba(74,143,96,.35);
-      transform: translateY(-2px);
-      transition: .25s ease;
-    }
-
     .icon-list {
       list-style: none;
       display: grid;
-      gap: 14px;
-      margin-top: 22px;
+      gap: 12px;
+      margin-top: 18px;
     }
 
     .icon-list li {
@@ -378,7 +361,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 18px;
+      margin-top: 16px;
     }
 
     .pill {
@@ -391,18 +374,18 @@
     }
 
     .quote {
-      padding: 46px 24px;
+      padding: 34px 20px;
       border-top: 1px solid rgba(255,255,255,.08);
       border-bottom: 1px solid rgba(255,255,255,.08);
       text-align: center;
-      font-size: clamp(1.5rem, 3vw, 2.6rem);
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
       line-height: 1.25;
       color: #e8ebef;
       letter-spacing: -.03em;
     }
 
     .footer {
-      padding: 44px 0 56px;
+      padding: 40px 0 52px;
       border-top: 1px solid rgba(255,255,255,.08);
       position: relative;
       z-index: 2;
@@ -442,8 +425,8 @@
     @media (max-width: 900px) {
       .nav { display: none; }
       .menu-btn { display: inline-grid; place-items: center; }
-      .section { padding: 88px 0; }
-      .hero { min-height: auto; padding-bottom: 40px; }
+      .section { padding: 64px 0; }
+      .hero { min-height: auto; padding-bottom: 36px; }
     }
 
     @media (max-width: 720px) {
@@ -510,70 +493,61 @@
             Dynamiken und langfristige Auswirkungen von Entscheidungen.
           </p>
           <div class="btn-row">
-            <a class="btn primary" href="index.html#contact">Kennenlerngespräch anfragen</a>
-            <a class="btn" href="index.html#contact">Workshop für Schule anfragen</a>
+            <a class="btn primary" href="https://calendar.app.google/Z8a9mhJY671PMM2k6" target="_blank" rel="noopener noreferrer">Termin vereinbaren</a>
+            <a class="btn" href="index.html#podcast">Podcast hören</a>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="grid-2">
-          <article class="card reveal">
-            <div class="eyebrow">Für Schulen & Lernräume</div>
-            <h2>Worum es geht</h2>
-            <p class="muted" style="margin-top:18px;">
-              Viele Herausforderungen, mit denen junge Menschen heute konfrontiert sind,
-              lassen sich nicht durch lineares Denken lösen.
-            </p>
-            <p class="muted" style="margin-top:16px;">
-              Systems Thinking erweitert den Blick:
-              Zusammenhänge werden sichtbar,
-              Entwicklungen über Zeit nachvollziehbar
-              und unterschiedliche Perspektiven integrierbar.
-            </p>
-            <p class="muted" style="margin-top:16px;">
-              Ziel ist nicht nur besseres Verstehen,
-              sondern die Fähigkeit,
-              komplexe Themen eigenständig zu strukturieren und einzuordnen.
-            </p>
-          </article>
+      <div class="container grid-2">
+        <article class="card reveal">
+          <div class="eyebrow">Für Schulen & Lernräume</div>
+          <h2>Worum es geht</h2>
+          <p class="muted" style="margin-top:16px;">
+            Viele Herausforderungen, mit denen junge Menschen heute konfrontiert sind,
+            lassen sich nicht durch lineares Denken lösen.
+          </p>
+          <p class="muted" style="margin-top:14px;">
+            Systems Thinking erweitert den Blick:
+            Zusammenhänge werden sichtbar,
+            Entwicklungen über Zeit nachvollziehbar
+            und unterschiedliche Perspektiven integrierbar.
+          </p>
+          <p class="muted" style="margin-top:14px;">
+            Ziel ist nicht nur besseres Verstehen,
+            sondern die Fähigkeit,
+            komplexe Themen eigenständig zu strukturieren und einzuordnen.
+          </p>
+        </article>
 
-          <article class="card reveal">
-            <div class="eyebrow">Was Schülerinnen und Schüler entwickeln</div>
-            <h2>Systemische Analysefähigkeit</h2>
-            <ul class="icon-list">
-              <li>Verständnis für Wechselwirkungen und Rückkopplungen in komplexen Systemen</li>
-              <li>Fähigkeit, Probleme strukturiert und mehrperspektivisch zu analysieren</li>
-              <li>Reflexionsvermögen im eigenen Denken und Handeln</li>
-              <li>Umgang mit Unsicherheit und nicht-linearen Entwicklungen</li>
-              <li>Verknüpfung unterschiedlicher Themenfelder zu konsistenten Gesamtbildern</li>
-            </ul>
-            <p class="muted" style="margin-top:20px;">
-              Anhand konkreter Beispiele wird sichtbar,
-              wie Systeme im Alltag wirken:
-              etwa bei Social Media, Klimadynamiken,
-              wirtschaftlichen Entscheidungen oder sozialen Ungleichheiten.
-            </p>
-            <p class="muted" style="margin-top:16px;">
-              Im Fokus steht dabei auch die eigene Rolle im System:
-              Welche Dynamiken verstärke ich selbst?
-              Wo entstehen unbeabsichtigte Effekte durch mein Verhalten?
-              Und an welchen Stellen kann ich bewusst anders handeln?
-            </p>
-          </article>
-        </div>
+        <article class="card reveal">
+          <div class="eyebrow">Was Schülerinnen und Schüler entwickeln</div>
+          <h2>Systemische Analysefähigkeit</h2>
+          <ul class="icon-list">
+            <li>Verständnis für Wechselwirkungen und Rückkopplungen in komplexen Systemen</li>
+            <li>Fähigkeit, Probleme strukturiert und mehrperspektivisch zu analysieren</li>
+            <li>Reflexionsvermögen im eigenen Denken und Handeln</li>
+            <li>Umgang mit Unsicherheit und nicht-linearen Entwicklungen</li>
+            <li>Verknüpfung unterschiedlicher Themenfelder zu konsistenten Gesamtbildern</li>
+          </ul>
+          <p class="muted" style="margin-top:18px;">
+            Anhand konkreter Beispiele wird sichtbar,
+            wie Systeme im Alltag wirken:
+            etwa bei Social Media, Klimadynamiken,
+            wirtschaftlichen Entscheidungen oder sozialen Ungleichheiten.
+          </p>
+        </article>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
         <article class="card reveal">
-          <div class="eyebrow">Formate für Bildungseinrichtungen</div>
-          <h2>Flexibel einsetzbar im schulischen Kontext.</h2>
+          <h3>Formate für Bildungseinrichtungen</h3>
           <ul class="icon-list">
-            <li>Einführungsworkshop (ab Klasse 9)</li>
+            <li>Einführungsworkshop ab Klasse 9</li>
             <li>Mehrteilige Workshopreihe für Projektformate und Seminarkurse</li>
             <li>Integration in bestehende Unterrichtsfächer</li>
             <li>Fächerübergreifend einsetzbar, z. B. Geographie, Wirtschaft, Politik, Biologie, Ethik</li>
@@ -584,58 +558,45 @@
 
     <section class="section">
       <div class="container">
-        <div class="quote reveal">Nicht nur Inhalte vermitteln – sondern vernetztes Denken ermöglichen.</div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="grid-2">
-          <article class="card reveal">
-            <div class="eyebrow">Für Lehrkräfte</div>
-            <h2>Systemisches Denken als Methode im Unterricht verankern.</h2>
-            <p class="muted" style="margin-top:18px;">
-              Eine Einführung in Systems Thinking – mit dem Ziel,
-              es eigenständig und fachübergreifend im Unterricht anzuwenden.
-            </p>
-            <p class="muted" style="margin-top:16px;">
-              Systems Thinking wird nicht als zusätzliches Fach vermittelt,
-              sondern als Denk- und Arbeitsweise, die sich in bestehende
-              Unterrichtsinhalte integrieren lässt.
-            </p>
-            <p class="muted" style="margin-top:16px;">
-              Lehrkräfte lernen, wie sich komplexe Themen strukturieren lassen –
-              und wie Schülerinnen und Schüler dazu befähigt werden,
-              Zusammenhänge selbstständig zu erkennen und zu hinterfragen.
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <div class="eyebrow">Was Lehrkräfte mitnehmen</div>
-            <h2>Methoden für den Unterricht</h2>
-            <ul class="icon-list">
-              <li>Ein grundlegendes Verständnis systemischer Zusammenhänge</li>
-              <li>Methoden zur Analyse komplexer Themen im Unterricht</li>
-              <li>Didaktische Ansätze zur Förderung von Reflexionsvermögen</li>
-              <li>Konkrete Werkzeuge zur direkten Anwendung im eigenen Fach</li>
-              <li>Ansätze, um Schülerinnen und Schüler zur eigenständigen Analyse zu befähigen</li>
-            </ul>
-            <p class="muted" style="margin-top:20px;">
-              Ziel ist nicht zusätzliche Theorie,
-              sondern eine veränderte Perspektive auf Unterricht:
-              weg von isolierten Inhalten –
-              hin zu vernetzten, verstehbaren Zusammenhängen.
-            </p>
-          </article>
-        </div>
+        <div class="quote reveal">Nicht nur Inhalte vermitteln — sondern vernetztes Denken ermöglichen.</div>
       </div>
     </section>
 
     <section class="section">
       <div class="container grid-2">
         <article class="card reveal">
-          <div class="eyebrow">Werkzeuge</div>
-          <h3>Methodische Elemente</h3>
+          <div class="eyebrow">Für Lehrkräfte</div>
+          <h2>Systemisches Denken als Methode im Unterricht verankern.</h2>
+          <p class="muted" style="margin-top:16px;">
+            Systems Thinking wird nicht als zusätzliches Fach vermittelt,
+            sondern als Denk- und Arbeitsweise, die sich in bestehende
+            Unterrichtsinhalte integrieren lässt.
+          </p>
+          <p class="muted" style="margin-top:14px;">
+            Lehrkräfte lernen, wie sich komplexe Themen strukturieren lassen —
+            und wie Schülerinnen und Schüler dazu befähigt werden,
+            Zusammenhänge selbstständig zu erkennen und zu hinterfragen.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="eyebrow">Was Lehrkräfte mitnehmen</div>
+          <h2>Methoden für den Unterricht</h2>
+          <ul class="icon-list">
+            <li>Ein grundlegendes Verständnis systemischer Zusammenhänge</li>
+            <li>Methoden zur Analyse komplexer Themen im Unterricht</li>
+            <li>Didaktische Ansätze zur Förderung von Reflexionsvermögen</li>
+            <li>Konkrete Werkzeuge zur direkten Anwendung im eigenen Fach</li>
+            <li>Ansätze, um Schülerinnen und Schüler zur eigenständigen Analyse zu befähigen</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <article class="card reveal">
+          <h3>Werkzeuge</h3>
           <div class="pill-grid">
             <span class="pill">Causal Loop Diagrams</span>
             <span class="pill">Iceberg Model</span>
@@ -645,13 +606,12 @@
         </article>
 
         <article class="card reveal">
-          <div class="eyebrow">Formate für Lehrkräfte</div>
-          <h3>Einführung & Transfer</h3>
+          <h3>Formate für Lehrkräfte</h3>
           <ul class="icon-list">
             <li>Eintägige Einführung in Systems Thinking</li>
             <li>Integration in bestehende Unterrichtsfächer</li>
             <li>Optional: Begleitung bei der Umsetzung im Unterricht</li>
-            <li>Geeignet für: Geographie · Wirtschaft · Politik · Biologie · Ethik</li>
+            <li>Geeignet für Geographie, Wirtschaft, Politik, Biologie und Ethik</li>
           </ul>
         </article>
       </div>
@@ -661,8 +621,7 @@
       <div class="container">
         <div class="quote reveal">Systemisches Denken stärkt Orientierung, Reflexion und Verantwortung.</div>
         <div class="btn-row reveal" style="justify-content:center;">
-          <a class="btn primary" href="index.html#contact">Kennenlerngespräch anfragen</a>
-          <a class="btn" href="index.html#contact">Workshop für Schule anfragen</a>
+          <a class="btn primary" href="https://calendar.app.google/Z8a9mhJY671PMM2k6" target="_blank" rel="noopener noreferrer">Termin vereinbaren</a>
         </div>
       </div>
     </section>
