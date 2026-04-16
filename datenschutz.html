@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutz — Alicia Frommann</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --bg-soft: #0f1016;
+      --card: #111118;
+      --text: #f0f0f0;
+      --muted: #b3b6c3;
+      --accent: #2d5a3d;
+      --accent-light: #4a8f60;
+      --radius: 24px;
+      --container: 860px;
+      --nav-h: 78px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: var(--accent-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+      background: rgba(10,10,15,.85);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .brand {
+      font-size: .85rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+    }
+    .back-link {
+      margin-left: auto;
+      font-size: .9rem;
+      color: var(--muted);
+      transition: color .2s;
+    }
+    .back-link:hover { color: var(--text); text-decoration: none; }
+
+    main {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: calc(var(--nav-h) + 80px) 20px 100px;
+    }
+
+    .eyebrow {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 48px;
+    }
+
+    .block {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      margin-bottom: 24px;
+    }
+    .block h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 16px;
+    }
+    .block p, .block li {
+      color: var(--muted);
+      margin-bottom: 10px;
+      font-size: .95rem;
+    }
+    .block ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+    .block li:last-child, .block p:last-child { margin-bottom: 0; }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding: 32px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+    footer a { color: var(--accent-light); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="brand">Alicia Frommann</div>
+    <a class="back-link" href="index.html">← Zurück zur Website</a>
+  </nav>
+
+  <main>
+    <div class="eyebrow">Rechtliches</div>
+    <h1>Datenschutzerklärung</h1>
+
+    <div class="block">
+      <h2>1. Verantwortliche Person</h2>
+      <p>
+        Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br><br>
+        <strong style="color:var(--text)">Alicia Frommann</strong><br>
+        Otto-Löffler-Weg 10, 73207 Plochingen<br>
+        E-Mail: <a href="mailto:alicia.frommann@gmail.com">alicia.frommann@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="block">
+      <h2>2. Hosting & Server-Logfiles</h2>
+      <p>
+        Diese Website wird über GitHub Pages (GitHub Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA) gehostet.
+        Beim Aufruf der Website werden automatisch Informationen in sogenannten Server-Logfiles gespeichert,
+        die dein Browser übermittelt. Dies sind:
+      </p>
+      <ul>
+        <li>Browsertyp und Browserversion</li>
+        <li>Verwendetes Betriebssystem</li>
+        <li>Referrer URL</li>
+        <li>Hostname des zugreifenden Rechners</li>
+        <li>Uhrzeit der Serveranfrage</li>
+        <li>IP-Adresse</li>
+      </ul>
+      <p>
+        Die Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb der Website).
+        Informationen zur Datenverarbeitung durch GitHub: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.
+      </p>
+    </div>
+
+    <div class="block">
+      <h2>3. Google Fonts</h2>
+      <p>
+        Diese Website nutzt Google Fonts (Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Irland)
+        zur einheitlichen Darstellung von Schriftarten. Beim Laden der Seite wird eine Verbindung zu
+        Google-Servern hergestellt, dabei kann deine IP-Adresse übertragen werden.
+        Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
+        Datenschutzinformationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.
+      </p>
+    </div>
+
+    <div class="block">
+      <h2>4. Spotify (eingebetteter Podcast)</h2>
+      <p>
+        Diese Website bindet Inhalte von Spotify AB (Regeringsgatan 19, 111 53 Stockholm, Schweden) ein.
+        Beim Laden des eingebetteten Players kann Spotify Daten wie deine IP-Adresse und Nutzungsdaten erheben,
+        auch wenn du nicht bei Spotify eingeloggt bist.
+      </p>
+      <p>
+        Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
+        Datenschutzrichtlinie von Spotify: <a href="https://www.spotify.com/de/legal/privacy-policy/" target="_blank" rel="noopener">spotify.com/de/legal/privacy-policy</a>.
+      </p>
+    </div>
+
+    <div class="block">
+      <h2>5. LinkedIn</h2>
+      <p>
+        Diese Website enthält Links und ggf. eingebettete Inhalte von LinkedIn (LinkedIn Ireland Unlimited Company,
+        Wilton Place, Dublin 2, Irland). Beim Anklicken eines LinkedIn-Links wirst du auf die LinkedIn-Plattform
+        weitergeleitet. LinkedIn erhebt dabei eigene Daten gemäß seiner Datenschutzrichtlinie.
+      </p>
+      <p>
+        Datenschutzrichtlinie von LinkedIn: <a href="https://de.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener">linkedin.com/legal/privacy-policy</a>.
+      </p>
+    </div>
+
+    <div class="block">
+      <h2>6. Google Meet (Terminbuchung)</h2>
+      <p>
+        Für die Buchung von Kennenlerngesprächen wird Google Meet / Google Calendar
+        (Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Irland) eingesetzt.
+        Bei der Nutzung des Buchungslinks werden Daten an Google übertragen.
+        Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung).
+      </p>
+      <p>
+        Datenschutzinformationen von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.
+      </p>
+    </div>
+
+    <div class="block">
+      <h2>7. Kontakt per E-Mail</h2>
+      <p>
+        Wenn du per E-Mail Kontakt aufnimmst, werden die übermittelten Daten (Name, E-Mail-Adresse,
+        Nachrichteninhalt) zur Bearbeitung deiner Anfrage gespeichert. Diese Daten gebe ich nicht
+        ohne deine Einwilligung weiter. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.
+      </p>
+    </div>
+
+    <div class="block">
+      <h2>8. Keine Cookies & kein Tracking</h2>
+      <p>
+        Diese Website setzt keine eigenen Cookies und verwendet kein Tracking- oder Analysetool
+        (kein Google Analytics, kein Meta Pixel o.ä.). Eingebettete Drittanbieter-Inhalte
+        (Spotify, Google) können eigene Cookies setzen – hierauf habe ich keinen Einfluss.
+      </p>
+    </div>
+
+    <div class="block">
+      <h2>9. Deine Rechte</h2>
+      <p>Du hast gegenüber mir folgende Rechte hinsichtlich deiner personenbezogenen Daten:</p>
+      <ul>
+        <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+        <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+        <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+        <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+        <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+        <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>
+        <li>Beschwerderecht bei einer Aufsichtsbehörde (Art. 77 DSGVO)</li>
+      </ul>
+      <p>
+        Für Anfragen wende dich an: <a href="mailto:alicia.frommann@gmail.com">alicia.frommann@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="block">
+      <h2>10. Aktualität</h2>
+      <p>Stand: April 2026. Diese Datenschutzerklärung wird bei Bedarf aktualisiert.</p>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Alicia Frommann &nbsp;·&nbsp;
+    <a href="impressum.html">Impressum</a> &nbsp;·&nbsp;
+    <a href="index.html">Zurück zur Website</a>
+  </footer>
+
+</body>
+</html>
